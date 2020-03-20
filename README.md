@@ -2,3 +2,5 @@
 主要运用pyecharts进行数据分析及可视化操作
 <br>
 项目地址：https://github.com/pyecharts/pyecharts
+<br>
+官方文档：https://pyecharts.org/#/zh-cn/intro
