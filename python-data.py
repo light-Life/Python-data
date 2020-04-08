@@ -10,14 +10,14 @@ headers = {'User-Agent':'Mozilla/5.0'}
 url = 'https://www.liaoxuefeng.com/wiki/1016959663602400'
 response = requests.get(url,headers=headers)
 
-inde = re.findall('<li.*?id="off-(.*?)".*?<a.*?>(.*?)</a>',response.text,re.S)
+inde = re.findall('<li.*?id="off-(.*?)".*?<a.*?href="(.*?)">(.*?)</a>',response.text,re.S)
 name = []
 Read = []
 for indes in inde:
-    id = str(indes[0])
-    name.append(indes[1])
-    print('正在分析:',indes[1])
-    urlid = 'https://www.liaoxuefeng.com/wiki/1016959663602400/'+id
+    id = str(indes[1])
+    name.append(indes[2])
+    print('正在分析:',indes[2])
+    urlid = 'https://www.liaoxuefeng.com'+id
     response = requests.get(urlid,headers=headers)
     if response.status_code == 200:
         inde = re.findall('<span>Reads:(.*?)</span>',response.text)
