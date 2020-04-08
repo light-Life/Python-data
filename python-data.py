@@ -1,4 +1,4 @@
-# !/usr/bin/python
+# !/usr/bin/pytho
 # -*- coding:utf-8 -*-
 # time: 2020.3.19
 import requests,re
