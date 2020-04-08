@@ -31,6 +31,7 @@ for indes in inde:
     .add_yaxis(
         series_name="热力值",#坐标轴指示器的文本标签
         y_axis=Read,
+        is_smooth=True,#是否平滑曲线
         areastyle_opts=opts.AreaStyleOpts(opacity=0.5),#填充颜色深度,默认颜色
         label_opts=opts.LabelOpts(is_show=False),#标签配置项,显示标签数字
     )
